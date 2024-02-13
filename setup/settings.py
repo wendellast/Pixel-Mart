@@ -40,11 +40,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    # TODO: Remove
-    "debug_toolbar",
     # My Apps
     "product",
     "order",
+    "profile",
 ]
 
 MIDDLEWARE = [

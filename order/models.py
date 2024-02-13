@@ -22,7 +22,6 @@ class Order(models.Model):
     def __str__(self):
         return f"Order Nº {self.pk}"
 
-
 class OrderItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
     product = models.CharField(max_length=255)
@@ -32,7 +31,7 @@ class OrderItem(models.Model):
     price = models.FloatField()
     promotional_price = models.FloatField(default=0)
     quantity = models.PositiveIntegerField()
-    imagem = models.CharField(max_length=2000)
+    image = models.URLField(max_length=2000)
 
     def __str__(self):
-        return f"Item of {self.order}"
+        return f"Item: {self.product} - Order: {self.order}"
