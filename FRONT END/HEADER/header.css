@@ -11,7 +11,7 @@
 header {
   position: fixed;
   width: 100%;
-  top: 0;
+  top: 0px;
   right: 0;
   z-index: 1000;
   display: flex;
@@ -19,6 +19,11 @@ header {
   justify-content: space-between;
   padding: 20px 10%;
   margin-top: 5px;
+}
+
+.logo img {
+  width: 265px;
+  height: auto;
 }
 
 .nav-icon {
