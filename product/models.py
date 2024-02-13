@@ -5,8 +5,8 @@ import os
 
 
 # Create your models here.
-class Produto(models.Model):
-    nome = models.CharField(max_length=255)
+class Product(models.Model):
+    name = models.CharField(max_length=255)
     description_short = models.TextField(max_length=255)
     description_long = models.TextField()
     image = models.ImageField(upload_to="produt_image/%Y/%m/", blank=True, null=True)
@@ -17,16 +17,16 @@ class Produto(models.Model):
         default="v",
         max_length=1,
         choices=(
-            ('V', "Variação"),
+            ("V", "Variação"),
             ("S", "Simples"),
-        ))
+        ),
+    )
 
     @staticmethod
     def resize_image(img, new_size=800):
         img_full_path = os.path.join(settings.MEDIA_ROOT, img.name)
         img_pil = Image.open(img_full_path)
         original_width, original_heigth = img_pil.size
-
 
         if original_width <= new_size:
             img_pil.close()
@@ -35,13 +35,9 @@ class Produto(models.Model):
         new_height = round((new_size * original_heigth) / original_width)
 
         new_img = img.pil.resize((new_size, new_height), Image.LANCZOS)
-        new_img.save(
-            img_full_path,
-            optimize=True,
-            quality=50
-        )
+        new_img.save(img_full_path, optimize=True, quality=50)
 
-        print('imagem redimencionda')
+        print("imagem redimencionda")
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
@@ -52,20 +48,16 @@ class Produto(models.Model):
             self.resize_image(self.image, max_image_size)
 
     def __str__(self):
-        return self.nome
+        return self.name
 
-class Variacao(models.Model):
-    produto = models.ForeignKey(Produto, on_delete=models.CASCADE)
-    nome = models.CharField(max_length=50, blank=True, null=True)
+
+class Variation(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    name = models.CharField(max_length=50, blank=True, null=True)
     preco = models.FloatField()
     preco_promotional = models.FloatField(default=0)
     estoque = models.PositiveIntegerField(default=1)
 
-
     def _str__(self):
-        return self.nome or self.produto.nome
+        return self.name or self.product.name
 
-    class Meta:
-        verbose_name = 'variacao'
-        verbose_name_plural = 'variações'
-        

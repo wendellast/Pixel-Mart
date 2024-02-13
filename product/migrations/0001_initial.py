@@ -7,22 +7,41 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Produto',
+            name="Produto",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('nome', models.CharField(max_length=255)),
-                ('description_short', models.TextField(max_length=255)),
-                ('description_long', models.TextField()),
-                ('image', models.ImageField(blank=True, null=True, upload_to='produt_image/%Y/%m/')),
-                ('slug', models.SlugField(unique=True)),
-                ('price_marketing', models.FloatField()),
-                ('price_marketing_promotional', models.FloatField(default=0)),
-                ('type_variation', models.CharField(choices=[('V', 'Variação'), ('S', 'Simples')], default='v', max_length=1)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("nome", models.CharField(max_length=255)),
+                ("description_short", models.TextField(max_length=255)),
+                ("description_long", models.TextField()),
+                (
+                    "image",
+                    models.ImageField(
+                        blank=True, null=True, upload_to="produt_image/%Y/%m/"
+                    ),
+                ),
+                ("slug", models.SlugField(unique=True)),
+                ("price_marketing", models.FloatField()),
+                ("price_marketing_promotional", models.FloatField(default=0)),
+                (
+                    "type_variation",
+                    models.CharField(
+                        choices=[("V", "Variação"), ("S", "Simples")],
+                        default="v",
+                        max_length=1,
+                    ),
+                ),
             ],
         ),
     ]

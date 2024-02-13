@@ -2,14 +2,14 @@ from django.contrib import admin
 from . import models
 
 
-class VariacaoInline(admin.TabularInline):
-    model = models.Variacao
+class Variationline(admin.TabularInline):
+    model = models.Variation
     extra = 1
 
-class ProdutoAdmin(admin.ModelAdmin):
-    inlines = [
-               VariacaoInline
-               ]
 
-admin.site.register(models.Produto, ProdutoAdmin)
-admin.site.register(models.Variacao)
+class ProdutoAdmin(admin.ModelAdmin):
+    inlines = [Variationline]
+
+
+admin.site.register(models.Product, ProdutoAdmin)
+admin.site.register(models.Variation)
