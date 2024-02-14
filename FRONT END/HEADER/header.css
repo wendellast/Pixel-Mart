@@ -131,7 +131,11 @@ header i:hover {
     justify-content: space-between;
     border-bottom: 0.2px solid #287cad7a;
 }
-
+#topCart h1,
+#topmenu h1 {
+    text-transform: uppercase;
+    font-weight: 300;
+}
 /* menu */
 .menu-content {
     background-color: var(--color-bg);
