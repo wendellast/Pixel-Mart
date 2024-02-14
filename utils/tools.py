@@ -1,8 +1,9 @@
 import re
 
+
 def valida_cpf(cpf):
     cpf = str(cpf)
-    cpf = re.sub(r'[^0-9]', '', cpf)
+    cpf = re.sub(r"[^0-9]", "", cpf)
 
     if not cpf or len(cpf) != 11:
         return False
@@ -27,9 +28,7 @@ def valida_cpf(cpf):
             total = 0
             novo_cpf += str(d)
 
-
     sequencia = novo_cpf == str(novo_cpf[0]) * len(cpf)
-
 
     if cpf == novo_cpf and not sequencia:
         return True

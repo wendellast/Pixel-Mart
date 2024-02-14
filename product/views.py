@@ -7,24 +7,29 @@ from . import models
 
 class ProductList(ListView):
     model = models.Product
-    template_name = 'product/list.html'
+    template_name = "product/list.html"
+
 
 class ProductDetail(View):
     def get(self, *args, **kwargs):
-        return  HttpResponse('Product Detail')
+        return HttpResponse("Product Detail")
+
 
 class ProductAddCar(View):
     def get(self, *args, **kwargs):
-        return  HttpResponse('Product add Car')
+        return HttpResponse("Product add Car")
+
 
 class ProductRemoveCar(View):
     def get(self, *args, **kwargs):
-        return  HttpResponse('Product Remove car')
+        return HttpResponse("Product Remove car")
+
 
 class ProductCar(View):
     def get(self, *args, **kwargs):
-        return  HttpResponse('Product Car')
+        return HttpResponse("Product Car")
+
 
 class ProductFinally(View):
     def get(self, *args, **kwargs):
-        return  HttpResponse('Product finaly')
+        return HttpResponse("Product finaly")

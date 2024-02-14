@@ -6,13 +6,15 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('product', '0003_rename_produto_product_rename_variacao_variation_and_more'),
+        ("product", "0003_rename_produto_product_rename_variacao_variation_and_more"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='product',
-            name='type_variation',
-            field=models.CharField(choices=[('V', 'Variavel'), ('S', 'Simples')], default='v', max_length=1),
+            model_name="product",
+            name="type_variation",
+            field=models.CharField(
+                choices=[("V", "Variavel"), ("S", "Simples")], default="v", max_length=1
+            ),
         ),
     ]

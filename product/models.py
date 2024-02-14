@@ -42,7 +42,7 @@ class Product(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            slug = f'{slugify(self.name)}-{self.pk}'
+            slug = f"{slugify(self.name)}-{self.pk}"
             self.slug = slug
         super().save(*args, **kwargs)
 
@@ -64,4 +64,3 @@ class Variation(models.Model):
 
     def _str__(self):
         return self.name or self.product.name
-
