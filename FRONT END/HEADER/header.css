@@ -74,7 +74,9 @@ header i:hover {
     background-color: var(--color-bg);
     border: none;
     margin: 0;
+    margin-left: 10px;
     width: 95%;
+    caret-color: var(--color-fg);
 }
 #pesquisa-container input:focus {
     outline: none;
@@ -110,8 +112,8 @@ header i:hover {
 }
 .cart-content img,
 .menu-content img {
-    width: 2rem;
-    height: 2rem;
+    width: 1.4rem;
+    height: 1.4rem;
     cursor: pointer;
 }
 .cart-content h1,
