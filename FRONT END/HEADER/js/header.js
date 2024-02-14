@@ -16,3 +16,30 @@ x.addEventListener("click", function () {
         cart.style.display = "none";
     }, 500);
 });
+
+const menuIcon = document.querySelector("#menuIcon");
+const menu = document.querySelector("#menu");
+const menuContent = document.querySelector(".menu-content");
+const x2 = document.querySelector("#closemenu");
+
+menuIcon.addEventListener("click", function () {
+    menu.style.display = "flex";
+    menuContent.classList.remove("slideOutRight");
+    menuContent.classList.add("slideInRight");
+});
+
+x2.addEventListener("click", function () {
+    menuContent.classList.remove("slideInRight");
+    menuContent.classList.add("slideOutRight");
+    setTimeout(() => {
+        menu.style.display = "none";
+    }, 500);
+});
+
+const select = document.getElementById("cores");
+select.addEventListener("change", () => {
+    const theme = select.value;
+
+    document.body.setAttribute("data-theme", theme);
+});
+select.dispatchEvent(new Event("change"));

@@ -6,60 +6,56 @@
     font-family: "Jost", sans-serif;
     list-style: none;
     text-decoration: none;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
+
 body {
-    background-color: #f9f6ee;
+    background-color: var(--color-bg);
+    color: var(--color-fg);
     margin: 0;
     padding: 0;
 }
 header {
     width: 100%;
-    height: 3.7rem;
+    height: 5rem;
     z-index: 1;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     flex-direction: row;
     margin-top: 1rem;
-}
-header a {
-    margin: 0;
-}
-.logo {
-    height: auto;
-    width: 12rem;
-    cursor: pointer;
-    align-items: center;
-    display: flex;
-    margin: 0 1.7rem;
-    padding: 0;
-}
-
-.nav-icon {
-    display: flex;
-    align-items: center;
-    margin-right: 1.7rem;
-    justify-content: space-between;
+    padding: 1rem;
 }
 
 header i {
     color: #287dad;
-    margin-right: 4rem;
     font-size: 25px;
-    font-weight: 400;
+    font-weight: 500;
     transition: all 0.42s ease;
+    cursor: pointer;
 }
 
 header i:hover {
     transform: scale(1.1);
 }
 
-#menu-icon {
-    font-size: 25px;
-    z-index: 2;
+.logo {
+    height: auto;
+    width: 25%;
     cursor: pointer;
-    margin-left: auto;
-    color: #287dad;
+    align-items: center;
+    display: flex;
+    margin: 0 1.6rem;
+    padding: 0;
+}
+
+.nav-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    justify-content: space-between;
+    width: 20%;
+    height: 100%;
 }
 
 #pesquisa-container {
@@ -70,12 +66,12 @@ header i:hover {
     padding: 0;
     border: 2px solid #287dad;
     border-radius: 12px;
-    width: 100%; /* muda o comprimento da caixa de pesquisa */
-    height: 2rem;
+    width: 100%;
+    height: 80%;
     margin-right: 2.5rem;
 }
 #pesquisa-container input {
-    background-color: #f9f6ee;
+    background-color: var(--color-bg);
     border: none;
     margin: 0;
     width: 95%;
@@ -91,7 +87,8 @@ header i:hover {
 }
 
 /* Cart */
-#cart {
+#cart,
+#menu {
     background-color: #c9c9c996;
     position: absolute;
     top: 0;
@@ -101,7 +98,7 @@ header i:hover {
     flex-direction: row-reverse;
 }
 .cart-content {
-    background-color: #fff;
+    background-color: var(--color-bg);
     height: 100%;
     width: 40%;
     display: flex;
@@ -111,26 +108,57 @@ header i:hover {
     z-index: 4;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-.cart-content img {
+.cart-content img,
+.menu-content img {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
 }
-.cart-content h1 {
+.cart-content h1,
+.menu-content h1 {
     text-transform: capitalize;
     font-size: 1.6rem;
     font-weight: 400;
+    color: var(--color-fg);
 }
-#topCart {
+#topCart,
+#topmenu {
     display: flex;
     padding: 1rem;
     flex-direction: row-reverse;
     justify-content: space-between;
+    border-bottom: 0.2px solid #287cad7a;
 }
-#itensDoCart {
+
+/* menu */
+.menu-content {
+    background-color: var(--color-bg);
     height: 100%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    animation-duration: 0.5s;
+    padding: 1.4rem;
+    z-index: 4;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#itensDomenu {
     margin-top: 1rem;
-    border-top: 1px solid #287dad;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#itensDomenu select {
+    width: 100%;
+    height: 2.8rem;
+    border: 2px solid #287dad;
+    border-radius: 10px;
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    padding: 10px;
+    margin-top: 1rem;
 }
 
 .slideInRight {
@@ -176,4 +204,37 @@ header i:hover {
     to {
         transform: translateX(100%);
     }
+}
+
+input::-webkit-input-placeholder {
+    color: var(--color-fg);
+}
+
+input::-moz-placeholder {
+    color: var(--color-fg);
+}
+
+input:-ms-input-placeholder {
+    color: var(--color-fg);
+}
+
+input::-moz-placeholder {
+    color: var(--color-fg);
+}
+
+input:-moz-placeholder {
+    color: var(--color-fg);
+}
+option {
+    color: var(--color-fg);
+}
+
+[data-theme="claro"] {
+    --color-bg: #f9f6ee;
+    --color-fg: #000000;
+}
+
+[data-theme="escuro"] {
+    --color-bg: #070c1f;
+    --color-fg: #fff;
 }

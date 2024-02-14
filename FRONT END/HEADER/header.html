@@ -31,14 +31,15 @@
                 class="logo"
             />
             <div id="pesquisa-container">
-                <input type="text" placeholder="Pesquisar..." /><i
-                    class="bx bx-search"
-                ></i>
+                <input
+                    type="text"
+                    placeholder="O que voce esta procurando?"
+                /><i class="bx bx-search"></i>
             </div>
             <div class="nav-icon">
-                <a href="#"><i class="bx bx-user"></i></a>
-                <a href="#" id="cartIcon"><i class="bx bx-cart"></i></a>
-                <div class="bx bx-menu" id="menu-icon"></div>
+                <i class="bx bx-user"></i>
+                <i class="bx bx-cart" id="cartIcon"></i>
+                <i class="bx bx-menu" id="menuIcon"></i>
             </div>
         </header>
         <div id="cart" style="display: none">
@@ -51,8 +52,31 @@
                     />
                     <h1>Meu carrinho</h1>
                 </div>
-                <div id="itensDoCart">
+                <div id="itensDoCart"></div>
+            </div>
+        </div>
 
+        <div id="menu" style="display: none">
+            <div class="menu-content">
+                <div id="topmenu">
+                    <img
+                        src="https://cdn-icons-png.flaticon.com/128/1617/1617543.png"
+                        alt="x"
+                        id="closemenu"
+                    />
+                    <h1>Opcoes</h1>
+                </div>
+                <div id="itensDomenu">
+                    <select id="selectIdioma">
+                        <option value="0">Idioma</option>
+                        <option value="pt">Português</option>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                    </select>
+                    <select id="cores">
+                        <option value="claro">Modo Claro</option>
+                        <option value="escuro">Modo Escuro</option>
+                    </select>
                 </div>
             </div>
         </div>
