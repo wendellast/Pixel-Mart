@@ -91,17 +91,21 @@ passwordInput.addEventListener("blur", () => {
 });
 
 // senha visivel e inviaivel
-const eyeOn = document.getElementById('eyeOn');
-const eyeOf = document.getElementById('eyeOf');
+const eyeOn = document.getElementById("eyeOn");
+const eyeOf = document.getElementById("eyeOf");
 
 function showPassword() {
-    passwordInput.type = 'text';
-    eyeOn.style.display = 'none';
-    eyeOf.style.display = 'inline';
+    passwordInput.type = "text";
+    eyeOn.style.display = "none";
+    eyeOf.style.display = "inline";
 }
 
 function hidePassword() {
-    passwordInput.type = 'password';
-    eyeOn.style.display = 'inline';
-    eyeOf.style.display = 'none';
+    passwordInput.type = "password";
+    eyeOn.style.display = "inline";
+    eyeOf.style.display = "none";
 }
+
+document.getElementById("irCadastro").addEventListener("click", function () {
+    window.location.href = "/FRONT END/LOGIN/login.html";
+});

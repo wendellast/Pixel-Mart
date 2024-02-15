@@ -226,8 +226,6 @@ header i:hover {
 #itensDologin input:focus {
     outline: none;
 }
-.email.focus input {
-}
 .email.focus p,
 .password.focus p {
     background-color: var(--color-bg);
@@ -254,6 +252,10 @@ header i:hover {
     justify-content: left;
     display: flex;
     margin-top: -1rem;
+}
+#esqueceuSenha a {
+    color: #287dad;
+    transition: all 0.4s ease-out;
 }
 /* extra */
 .slideInRight {
