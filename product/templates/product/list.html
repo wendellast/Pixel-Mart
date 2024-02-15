@@ -1,1 +1,23 @@
 {% extends "base.html" %}
+
+{% block contend-list %}
+
+    {% for product in products %}
+        <section class="produtos">
+            <div class="card">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_441215-MLB25142005131_112016-O.webp"
+                    alt="notebook gamer pichau" />
+                <h1 id="titulo">Laptop infantil da Xuxa</h1>
+                <p id="descricao">
+                    Laptop da Xuxa com 24 atividades interativas de português,
+                    matemática, lógica e jogos.
+                </p>
+                <div id="preco">
+                    <h3>R$98,07</h3>
+                    <h4>10x de <span>R$9,81</span></h4>
+                </div>
+            </div>
+        </section>
+    {% endfor %}
+
+{% endblock contend-list %}

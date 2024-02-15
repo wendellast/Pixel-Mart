@@ -29,6 +29,10 @@ input:-moz-placeholder {
 }
 option {
     color: var(--color-fg);
+    cursor: pointer;
+}
+select{
+    cursor: pointer;
 }
 input {
     caret-color: var(--color-fg);
@@ -89,5 +93,5 @@ input {
 [data-theme="escuro"] {
     --color-bg: #070c1f;
     --color-fg: #fff;
-    --color-main: #287dad;
+    --color-main: #9ae621;
 }
