@@ -9,12 +9,6 @@
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-body {
-    background-color: var(--color-bg);
-    color: var(--color-fg);
-    margin: 0;
-    padding: 0;
-}
 header {
     width: 100%;
     height: 5rem;
@@ -28,7 +22,7 @@ header {
 }
 
 header i {
-    color: #287dad;
+    color: var(--color-main);
     font-size: 25px;
     font-weight: 500;
     transition: all 0.42s ease;
@@ -64,7 +58,7 @@ header i:hover {
     align-items: center;
     justify-content: space-around;
     padding: 0;
-    border: 2px solid #287dad;
+    border: 2px solid var(--color-main);
     border-radius: 12px;
     width: 100%;
     height: 80%;
@@ -76,7 +70,6 @@ header i:hover {
     margin: 0;
     margin-left: 10px;
     width: 95%;
-    caret-color: var(--color-fg);
 }
 #pesquisa-container input:focus {
     outline: none;
@@ -164,7 +157,7 @@ header i:hover {
 #itensDomenu select {
     width: 100%;
     height: 2.8rem;
-    border: 2px solid #287dad;
+    border: 2px solid var(--color-main);
     border-radius: 10px;
     background-color: var(--color-bg);
     color: var(--color-fg);
@@ -210,7 +203,7 @@ header i:hover {
     padding: 5px;
     align-items: center;
     justify-content: center;
-    border: 2px solid #287dad;
+    border: 2px solid var(--color-main);
 }
 #itensDologin div p {
     margin-left: 13px;
@@ -226,20 +219,22 @@ header i:hover {
 #itensDologin input:focus {
     outline: none;
 }
+#itensDologin input{
+    outline: none;
+}
 .email.focus p,
 .password.focus p {
     background-color: var(--color-bg);
     transform: translateY(-27px);
     font-size: 1rem;
 }
-
 #itensDologin button {
     height: 3.5rem;
     width: 100%;
     margin: 2rem;
     border-radius: 10px;
     border: none;
-    background-color: #287dad;
+    background-color: var(--color-main);
     color: var(--color-bg);
     font-size: 1.3rem;
     font-weight: 500;
@@ -254,84 +249,7 @@ header i:hover {
     margin-top: -1rem;
 }
 #esqueceuSenha a {
-    color: #287dad;
+    color: var(--color-main);
     transition: all 0.4s ease-out;
 }
 /* extra */
-.slideInRight {
-    animation-name: slideInRight;
-}
-.slideOutLeft {
-    animation-name: slideOutLeft;
-}
-.slideInLeft {
-    animation-name: slideInLeft;
-}
-.slideOutRight {
-    animation-name: slideOutRight;
-}
-@keyframes slideInRight {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-@keyframes slideOutLeft {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}
-@keyframes slideInLeft {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-@keyframes slideOutRight {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(100%);
-    }
-}
-
-input::-webkit-input-placeholder {
-    color: var(--color-fg);
-}
-
-input::-moz-placeholder {
-    color: var(--color-fg);
-}
-
-input:-ms-input-placeholder {
-    color: var(--color-fg);
-}
-
-input::-moz-placeholder {
-    color: var(--color-fg);
-}
-
-input:-moz-placeholder {
-    color: var(--color-fg);
-}
-option {
-    color: var(--color-fg);
-}
-
-[data-theme="claro"] {
-    --color-bg: #f9f6ee;
-    --color-fg: #000000;
-}
-
-[data-theme="escuro"] {
-    --color-bg: #070c1f;
-    --color-fg: #fff;
-}
