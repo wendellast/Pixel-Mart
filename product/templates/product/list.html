@@ -2,22 +2,34 @@
 
 {% block contend-list %}
 
-    {% for product in products %}
+
         <section class="produtos">
+        {% for product in products %}
             <div class="card">
-                <img src="https://http2.mlstatic.com/D_NQ_NP_441215-MLB25142005131_112016-O.webp"
-                    alt="notebook gamer pichau" />
-                <h1 id="titulo">Laptop infantil da Xuxa</h1>
+
+                {% if product.image %}
+                    <a href="{{ product.slug }}">
+                    <img src="{{ product.image.url }}"
+                    alt="{{ product.name }}" />
+                    </a>
+                {% endif %}
+
+                <h1 id="titulo">{{ product.name }}</h1>
                 <p id="descricao">
-                    Laptop da Xuxa com 24 atividades interativas de português,
-                    matemática, lógica e jogos.
+                    {{ product.description_short }}
                 </p>
+
                 <div id="preco">
-                    <h3>R$98,07</h3>
-                    <h4>10x de <span>R$9,81</span></h4>
+                    {% if product.price_marketing_promotional %}
+                        <h3>R$ {{product.price_marketing_promotional}} </h3>
+                        <h4>12x de <span>R${{ product.parce }}</span></h4>
+                    {% else %}
+                        <h3>R$ {{product.price_marketing}} </h3>
+                        <h4>12x de <span>R${{ product.parce }}</span></h4>
+                    {% endif %}
                 </div>
             </div>
+            {% endfor %}
         </section>
-    {% endfor %}
 
 {% endblock contend-list %}
