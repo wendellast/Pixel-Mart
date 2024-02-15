@@ -53,4 +53,5 @@ button {
     width: 80%;
     border-radius: 10px;
     border: none;
+    cursor: pointer;
 }

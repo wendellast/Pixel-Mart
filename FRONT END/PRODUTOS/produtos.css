@@ -1,7 +1,8 @@
-body{
+body {
     font-family: "Jost", sans-serif;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 .card {
@@ -26,7 +27,7 @@ body{
 .card p,
 .card h3,
 .card h4 {
-    margin: 0;
+    margin-top: 0;
 }
 .card h3 {
     color: #00a106;
@@ -39,15 +40,20 @@ body{
     align-items: left;
     justify-content: center;
     padding: 0;
+    margin: 0;
 }
 .card h4 {
-    font-size: 1rem;
+    font-size: 0.6rem;
     font-weight: 100;
     margin-left: 0.5rem;
 }
 .card span {
     color: #0066ff;
+    font-size: 1rem;
+    font-weight: 400;
 }
 .card h1 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    display: flex;
+    flex-wrap: nowrap;
 }

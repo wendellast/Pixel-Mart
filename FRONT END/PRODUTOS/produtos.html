@@ -1,36 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="produtos.css">
-    <title>Document</title>
-</head>
-<body>
-    <div class="card">
-        <img
-            src="https://http2.mlstatic.com/D_NQ_NP_441215-MLB25142005131_112016-O.webp"
-            alt="notebook gamer pichau"
-        />
-        <h1>Laptop infantil da Xuxa</h1>
-        <p>
-            Laptop da Xuxa com 24 atividades interativas de português,
-            matemática, lógica e jogos.
-        </p>
-        <div id="preco">
-            <h3>R$98,07</h3>
-            <h4>10x de <span>R$9,81</span></h4>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="produtos.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="card">
+            <img
+                src="https://http2.mlstatic.com/D_NQ_NP_441215-MLB25142005131_112016-O.webp"
+                alt="notebook gamer pichau"
+            />
+            <h1 id="titulo">Laptop infantil da Xuxa</h1>
+            <p id="descricao">
+                Laptop da Xuxa com 24 atividades interativas de português,
+                matemática, lógica e jogos.
+            </p>
+            <div id="preco">
+                <h3>R$98,07</h3>
+                <h4>10x de <span>R$9,81</span></h4>
+            </div>
         </div>
-        
+
         <!-- sem informacoes -->
         <div class="card">
-            <img src="" alt="">
-            <h1></h1>
-            <p></p>
+            <img src="" alt="" />
+            <h1 id="titulo"></h1>
+            <p id="descricao"></p>
             <div id="preco">
                 <h3></h3>
                 <h4></h4>
             </div>
         </div>
-</body>
+        <script>
+            const limiteDePalavrasD = 8;
+            const limiteDePalavrasT = 5;
+            const descricao = document.getElementById("descricao");
+            const titulo = document.getElementById("titulo");
+            const palavrasD = descricao.innerText.split(" ");
+            const palavrasT = titulo.innerText.split(" ");
+            if (palavrasD.length > limiteDePalavrasD) {
+                let cortadaDescricao =
+                    palavrasD.slice(0, limiteDePalavrasD).join(" ") + "...";
+                descricao.innerText = cortadaDescricao;
+            }
+            if (palavrasT.length > limiteDePalavrasT) {
+                let cortadoTitulo =
+                    palavrasT.slice(0, limiteDePalavrasT).join(" ") + "...";
+                titulo.innerText = cortadoTitulo;
+            }
+        </script>
+    </body>
 </html>
