@@ -90,7 +90,8 @@ header i:hover {
 
 /* Cart */
 #cart,
-#menu {
+#menu,
+#login {
     background-color: #c9c9c996;
     position: absolute;
     top: 0;
@@ -111,20 +112,23 @@ header i:hover {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .cart-content img,
-.menu-content img {
+.menu-content img,
+.login-content img {
     width: 1.4rem;
     height: 1.4rem;
     cursor: pointer;
 }
 .cart-content h1,
-.menu-content h1 {
+.menu-content h1,
+.login-content h1 {
     text-transform: capitalize;
     font-size: 1.6rem;
     font-weight: 400;
     color: var(--color-fg);
 }
 #topCart,
-#topmenu {
+#topmenu,
+#toplogin {
     display: flex;
     padding: 1rem;
     flex-direction: row-reverse;
@@ -132,7 +136,8 @@ header i:hover {
     border-bottom: 0.2px solid #287cad7a;
 }
 #topCart h1,
-#topmenu h1 {
+#topmenu h1,
+#toplogin h1 {
     text-transform: uppercase;
     font-weight: 300;
 }
@@ -167,6 +172,90 @@ header i:hover {
     margin-top: 1rem;
 }
 
+/* login */
+.login-content {
+    background-color: var(--color-bg);
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    animation-duration: 0.5s;
+    padding: 1.4rem;
+    z-index: 4;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#itensDologin {
+    margin-top: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+#itensDologin h3 {
+    font-weight: 400;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+}
+#itensDologin div {
+    display: flex;
+    margin-top: 2rem;
+    width: 100%;
+    height: 3rem;
+    border-radius: 10px;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #287dad;
+}
+#itensDologin div p {
+    margin-left: 13px;
+    transition: all 0.3s ease-in-out;
+}
+#itensDologin input {
+    width: 100%;
+    background-color: var(--color-bg);
+    border: none;
+    margin: 0;
+    font-size: 1rem;
+}
+#itensDologin input:focus {
+    outline: none;
+}
+.email.focus input {
+}
+.email.focus p,
+.password.focus p {
+    background-color: var(--color-bg);
+    transform: translateY(-27px);
+    font-size: 1rem;
+}
+
+#itensDologin button {
+    height: 3.5rem;
+    width: 100%;
+    margin: 2rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #287dad;
+    color: var(--color-bg);
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+#esqueceuSenha {
+    width: 100%;
+    text-align: center;
+    justify-content: left;
+    display: flex;
+    margin-top: -1rem;
+}
+/* extra */
 .slideInRight {
     animation-name: slideInRight;
 }
