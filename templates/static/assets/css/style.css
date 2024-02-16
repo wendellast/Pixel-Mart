@@ -88,10 +88,15 @@ input {
     --color-bg: #f9f6ee;
     --color-fg: #000000;
     --color-main: #287dad;
+    --color-card: #fff;
+    --box-shadow: none;
 }
 
 [data-theme="escuro"] {
-    --color-bg: #070c1f;
+    --color-bg:#1e2124;
     --color-fg: #fff;
-    --color-main: #9ae621;
+    --color-main: #287dad;
+    --color-card: #252729;
+    --box-shadow: 0px 0px 10px 0px rgba(153,193,241,0.82);
+
 }

@@ -1,16 +1,20 @@
-const limiteDePalavrasD = 8;
-const limiteDePalavrasT = 5;
-const descricao = document.getElementById("descricao");
-const titulo = document.getElementById("titulo");
-const palavrasD = descricao.innerText.split(" ");
-const palavrasT = titulo.innerText.split(" ");
-if (palavrasD.length > limiteDePalavrasD) {
-    let cortadaDescricao =
-        palavrasD.slice(0, limiteDePalavrasD).join(" ") + "...";
-    descricao.innerText = cortadaDescricao;
-}
-if (palavrasT.length > limiteDePalavrasT) {
-    let cortadoTitulo =
-        palavrasT.slice(0, limiteDePalavrasT).join(" ") + "...";
-    titulo.innerText = cortadoTitulo;
-}
+// document.addEventListener("DOMContentLoaded", function () {
+//     const limiteDeLetrasD = 5;
+//     const limiteDeLetrasT = 2;
+
+//     const descricao = document.getElementsByClassName("descricao");
+//     const titulo = document.getElementsByClassName("titulo");
+
+//     const textoD = descricao.innerText;
+//     const textoT = titulo.innerText;
+
+//     if (textoD.length > limiteDeLetrasD) {
+//         let cortadaDescricao = textoD.slice(0, limiteDeLetrasD) + "...";
+//         descricao.innerText = cortadaDescricao;
+//     }
+
+//     if (textoT.length > limiteDeLetrasT) {
+//         let cortadoTitulo = textoT.slice(0, limiteDeLetrasT) + "...";
+//         titulo.innerText = cortadoTitulo;
+//     }
+// });
