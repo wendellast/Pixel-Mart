@@ -38,15 +38,11 @@ class Product(models.Model):
         new_height = round((new_width * original_height) / original_width)
 
         new_img = img_pil.resize((new_width, new_height), Image.LANCZOS)
-        new_img.save(
-            img_full_path,
-            optimize=True,
-            quality=50
-        )
+        new_img.save(img_full_path, optimize=True, quality=50)
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            slug = f'{slugify(self.name)}-{round(random.uniform(0, 10000), 3)}'
+            slug = f"{slugify(self.name)}-{round(random.uniform(0, 10000), 3)}"
             self.slug = slug
 
         super().save(*args, **kwargs)
@@ -58,15 +54,12 @@ class Product(models.Model):
 
     def parce(self):
         if self.price_marketing_promotional:
-            return f'{round(self.price_marketing_promotional / 12, 2)}'
+            return f"{round(self.price_marketing_promotional / 12, 2)}"
 
-        return f'{round(self.price_marketing / 12, 2)}'
-
-
+        return f"{round(self.price_marketing / 12, 2)}"
 
     def __str__(self):
         return self.name
-
 
 
 class Variation(models.Model):
