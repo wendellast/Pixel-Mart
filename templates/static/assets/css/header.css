@@ -94,7 +94,7 @@ header i:hover {
     flex-direction: row-reverse;
 }
 .cart-content {
-    background-color: var(--color-bg);
+    background-color: var(--color-card);
     height: 100%;
     width: 40%;
     display: flex;
@@ -219,7 +219,7 @@ header i:hover {
 #itensDologin input:focus {
     outline: none;
 }
-#itensDologin input{
+#itensDologin input {
     outline: none;
 }
 .email.focus p,
@@ -252,4 +252,3 @@ header i:hover {
     color: var(--color-main);
     transition: all 0.4s ease-out;
 }
-/* extra */

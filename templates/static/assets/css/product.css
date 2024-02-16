@@ -1,3 +1,4 @@
+/* produtos.css */
 .card {
     display: flex;
     flex-direction: column;
@@ -8,13 +9,21 @@
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
         rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     border-radius: 1rem;
-    width: 13rem;
+    width: 13.4rem;
+    max-width: 13.4rem;
+    height: 20rem;
     padding: 1rem;
-    background-color: #fff;
+    background-color: var(--color-card);
     font-size: small;
+    cursor: pointer;
+    margin: 20px;
 }
 .card img {
     width: 10rem;
+    height: 55%;
+    box-shadow: var(--box-shadow);
+    border-radius: 12px;
+    margin-bottom: 10px;
 }
 .card h1,
 .card p,
@@ -34,10 +43,13 @@
     justify-content: center;
     padding: 0;
     margin: 0;
+    bottom: 0;
+    height: 10%;
+    margin-top: 3px;
 }
 .card h4 {
     font-size: 0.6rem;
-    font-weight: 100;
+    font-weight: 400;
     margin-left: 0.5rem;
 }
 .card span {
@@ -45,17 +57,43 @@
     font-size: 1rem;
     font-weight: 400;
 }
-.card h1 {
+.card a {
+    display: none;
+}
+#titulo {
     font-size: 1.1rem;
+    width: 100%;
+    align-items: left;
     display: flex;
     flex-wrap: nowrap;
 }
-
 .produtos {
-    margin-top: 5rem;
+    margin-top: 2rem;
+    padding: 2rem;
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+#descricao {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-align: left;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+#informacoesCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    margin: 0;
+    height: 35%;
+    width: 100%;
 }
