@@ -37,6 +37,4 @@ def valida_cpf(cpf):
 
 
 def price_format(value):
-    return f"R$ {value:.2f} ".replace('.', ',')
-
-
+    return f"R$ {value:.2f} ".replace(".", ",")
