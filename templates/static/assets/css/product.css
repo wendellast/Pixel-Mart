@@ -60,7 +60,7 @@
 .card a {
     display: none;
 }
-#titulo {
+.titulo {
     font-size: 1.1rem;
     width: 100%;
     align-items: left;
@@ -74,10 +74,10 @@
     height: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: baseline;
     flex-wrap: wrap;
 }
-#descricao {
+.descricao {
     width: 100%;
     height: auto;
     display: flex;

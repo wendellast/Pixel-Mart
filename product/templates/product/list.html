@@ -8,12 +8,12 @@
         <a href="{{ product.slug }}"> </a>
         {% endif %}
         <div id="informacoesCard">
-            <h1 id="titulo">{{ product.name|truncatechars_html:30 }}</h1>
-            <p id="descricao">
-                {{ product.description_short|truncatechars_html:55 }}
+            <h1 class="titulo">{{ product.name| truncatechars_html:30}}</h1>
+            <p class="descricao">
+                {{ product.description_short | truncatechars_html:30}}
             </p>
         </div>
-
+<!--  -->
         <div id="preco">
             {% if product.price_marketing_promotional %}
             <h3>{{product.price_marketing_promotional|reform_price}}</h3>

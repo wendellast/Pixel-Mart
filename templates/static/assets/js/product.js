@@ -2,8 +2,8 @@
 //     const limiteDeLetrasD = 5;
 //     const limiteDeLetrasT = 2;
 
-//     const descricao = document.getElementById("descricao");
-//     const titulo = document.getElementById("titulo");
+//     const descricao = document.getElementsByClassName("descricao");
+//     const titulo = document.getElementsByClassName("titulo");
 
 //     const textoD = descricao.innerText;
 //     const textoT = titulo.innerText;
