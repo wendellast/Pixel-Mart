@@ -1,16 +1,17 @@
-{% extends "base.html" %} {% load omfilters %} {% block contend-list %}
+{% extends "base.html" %}
+{% load omfilters %}
+{% block contend-list %}
 
 <section class="produtos">
     {% for product in products %}
     <div class="card">
         {% if product.image %}
-        <img src="{{ product.image.url }}" alt="{{ product.name }}" />
-        <a href="{{ product.slug }}"> </a>
+            <img src="{{ product.image.url }}" alt="{{ product.name }}" />
         {% endif %}
         <div id="informacoesCard">
             <h1 class="titulo">{{ product.name| truncatechars_html:30}}</h1>
             <p class="descricao">
-                {{ product.description_short | truncatechars_html:30}}
+                {{ product.description_short | truncatechars_html:45    }}
             </p>
         </div>
 <!--  -->

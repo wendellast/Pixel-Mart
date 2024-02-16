@@ -36,17 +36,19 @@
     font-size: 1.3rem;
     margin-left: 0;
 }
+
 #preco {
     display: flex;
     flex-direction: row;
-    align-items: left;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
     padding: 0;
     margin: 0;
-    bottom: 0;
-    height: 10%;
-    margin-top: 3px;
+    height: auto;
+    margin-top: auto;
 }
+
+
 .card h4 {
     font-size: 0.6rem;
     font-weight: 400;
@@ -77,17 +79,17 @@
     justify-content: baseline;
     flex-wrap: wrap;
 }
+
 .descricao {
     width: 100%;
     height: auto;
-    display: flex;
     align-items: center;
-    justify-content: left;
     text-align: left;
     flex-wrap: wrap;
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
+
 #informacoesCard {
     display: flex;
     flex-direction: column;
