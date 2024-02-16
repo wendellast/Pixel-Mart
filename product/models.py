@@ -4,6 +4,8 @@ from PIL import Image
 import os
 from django.utils.text import slugify
 import random
+from utils import tools
+
 
 # Create your models here.
 class Product(models.Model):
@@ -56,9 +58,9 @@ class Product(models.Model):
 
     def parce(self):
         if self.price_marketing_promotional:
-            return f'{round(self.price_marketing_promotional / 12, 2)}'.replace('.', ',')
+            return f'{round(self.price_marketing_promotional / 12, 2)}'
 
-        return f'{round(self.price_marketing / 12, 2)}'.replace('.', ',')
+        return f'{round(self.price_marketing / 12, 2)}'
 
 
 

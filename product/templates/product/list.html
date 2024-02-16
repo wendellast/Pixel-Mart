@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load omfilters %}
 {% block contend-list %}
 
 
@@ -21,7 +21,7 @@
 
                 <div id="preco">
                     {% if product.price_marketing_promotional %}
-                        <h3>R$ {{product.price_marketing_promotional}} </h3>
+                        <h3>{{product.price_marketing_promotional|reform_price}} </h3>
                         <h4>12x de <span>R${{ product.parce }}</span></h4>
                     {% else %}
                         <h3>R$ {{product.price_marketing}} </h3>
