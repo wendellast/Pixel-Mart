@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="login.css" />
+        <title>Cadastro</title>
+    </head>
+    <body>
+        <main>
+            <h1>Por favor, preencha os campos abaixo corretamente.</h1>
+            <div id="inputs">
+                <input
+                    type="text"
+                    name="nome"
+                    id="nome"
+                    placeholder="Nome Completo"
+                    required
+                />
+                <input
+                    type="email"
+                    name="email"
+                    id="emailCadastro"
+                    placeholder="E-mail"
+                    required
+                />
+                <input
+                    type="text"
+                    name="password"
+                    id="senha"
+                    placeholder="Senha"
+                    required
+                />
+                <input
+                    type="date"
+                    name="data_nascimento"
+                    id="dtNascimento"
+                    required
+                />
+            </div>
+
+            <button id="save" type="submit">Salvar</button>
+        </main>
+        <script>
+            document
+                .getElementById("save")
+                .addEventListener("click", function () {
+                    window.location.href = "/index.html";
+                });
+        </script>
+    </body>
+</html>

@@ -1,32 +1,11 @@
-{% extends "base.html" %}
-{% load omfilters %}
-{% block contend-list %}
-
-<section class="produtos">
-    {% for product in products %}
-    <div class="card">
-        {% if product.image %}
-            <img src="{{ product.image.url }}" alt="{{ product.name }}" />
-        {% endif %}
-        <div id="informacoesCard">
-            <h1 class="titulo">{{ product.name| truncatechars_html:30}}</h1>
-            <p class="descricao">
-                {{ product.description_short | truncatechars_html:45    }}
-            </p>
-        </div>
-<!--  -->
-        <div id="preco">
-            {% if product.price_marketing_promotional %}
-            <h3>{{product.price_marketing_promotional|reform_price}}</h3>
-            <h4>12x de <span>R${{ product.parce }}</span></h4>
-            {% else %}
-            <h3>R$ {{product.price_marketing}}</h3>
-            <h4>12x de <span>R${{ product.parce }}</span></h4>
-            {% endif %}
-        </div>
-    </div>
-
-    {% endfor %}
-</section>
-
-{% endblock contend-list %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Olá</h1>
+</body>
+</html>

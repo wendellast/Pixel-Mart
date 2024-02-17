@@ -8,7 +8,6 @@ from . import models
 class ProductList(ListView):
     model = models.Product
     template_name = "product/list.html"
-    context_object_name = "products"
 
 
 class ProductDetail(View):

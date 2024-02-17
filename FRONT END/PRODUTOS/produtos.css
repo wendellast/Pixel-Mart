@@ -1,0 +1,60 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+        rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    border-radius: 1rem;
+    width: 13rem;
+    padding: 1rem;
+    background-color: #fff;
+    font-size: small;
+}
+.card img {
+    width: 10rem;
+}
+.card h1,
+.card p,
+.card h3,
+.card h4 {
+    margin-top: 0;
+}
+.card h3 {
+    color: #00a106;
+    font-size: 1.3rem;
+    margin-left: 0;
+}
+#preco {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+.card h4 {
+    font-size: 0.6rem;
+    font-weight: 100;
+    margin-left: 0.5rem;
+}
+.card span {
+    color: var(--color-main);
+    font-size: 1rem;
+    font-weight: 400;
+}
+.card h1 {
+    font-size: 1.1rem;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.produtos {
+    margin-top: 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
