@@ -109,6 +109,6 @@ function hidePassword() {
 document.getElementById("irCadastro").addEventListener("click", function () {
     window.location.href = "/FRONT-END/LOGIN/login.html";
 });
-document.getElementsByClassName("logo").addEventListener("click", function () {
-    window.location.href = "/base.html";
+document.querySelector(".logo").addEventListener("click", function () {
+    location.reload();
 });
