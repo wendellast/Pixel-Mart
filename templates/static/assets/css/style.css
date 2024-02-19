@@ -85,7 +85,7 @@ input {
 }
 
 [data-theme="claro"] {
-    --color-bg: #f9f6ee;
+    --color-bg: #f6f6f6;
     --color-fg: #000000;
     --color-main: #287dad;
     --color-card: #fff;

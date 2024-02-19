@@ -1,0 +1,59 @@
+.slider {
+    width: 100%;
+    height: 320px;
+    background-size: cover;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.slides {
+    width: 500%;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    position: relative;
+    display: flex;
+    transition: 1.5s;
+}
+
+.slide img {
+    width: 100%;
+    height: 320px;
+    display: block;
+    object-fit: cover;
+}
+
+.manual-navigation {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 5px;
+}
+
+.manual-btn:hover {
+    background: #fff;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -18%;
+}

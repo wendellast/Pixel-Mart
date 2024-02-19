@@ -10,6 +10,8 @@
 <body>
     {% include "partials/_header.html" %}
 
+    {% block banner-image %}{% endblock banner-image %}
+
     <section class="slidebars">
         <div id="cart" style="display: none">
             <div class="cart-content">
@@ -76,9 +78,8 @@
         </div>
     </section>
 
+
     {% block contend-list %}{% endblock contend-list %}
-
-
     {% include "partials/_footer.html" %}
 
 </body>
