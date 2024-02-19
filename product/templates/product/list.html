@@ -1,5 +1,46 @@
 {% extends "base.html" %}
 {% load omfilters %}
+
+{% block banner-image %}
+{% load static %}
+
+<!-- ####################################################### -->
+
+
+
+
+
+<!-- ####################################################### -->
+
+<section class="slider">
+    <div class="slides">
+        <input type="radio" name="radio-btn" id="radio1" />
+        <input type="radio" name="radio-btn" id="radio2" />
+
+
+        <div class="slide first">
+            {% for banner in banners %}
+                {% for imagem in banner.imagens_banner.all %}
+                    <img src="{{ imagem.imagem_banner.url }}" alt="Imagem do banner">
+                {% endfor %}
+            {% endfor %}
+        </div>
+
+        <div class="navation-outo">
+            <div class="outo btn1"></div>
+            <div class="outo btn2"></div>
+        </div>
+
+        <div class="manual-navigation">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+        </div>
+    </div>
+</section>
+
+{% endblock banner-image %}
+<!-- ####################################################### -->
+
 {% block contend-list %}
 
 <section class="produtos">
@@ -17,7 +58,7 @@
                     {{ product.description_short | truncatechars_html:48}}
                 </p>
             </div>
-            <!--  -->
+            <!-- ####################################################### -->
             <div class="preco">
                 {% if product.price_marketing_promotional %}
                 <h3>{{product.price_marketing_promotional|reform_price}}</h3>
