@@ -9,8 +9,11 @@
 
 <body>
     {% include "partials/_header.html" %}
+    
 
     {% block banner-image %}{% endblock banner-image %}
+
+    {% block product-detail %}{% endblock product-detail %}
 
     <section class="slidebars">
         <div id="cart" style="display: none">
@@ -43,6 +46,11 @@
                 </div>
             </div>
         </div>
+
+
+        {% block content-login-form %}{% endblock content-login-form %}
+
+
 
         <div id="login" style="display: none">
             <div class="login-content">
