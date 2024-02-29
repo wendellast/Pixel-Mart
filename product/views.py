@@ -16,10 +16,10 @@ class ProductList(ListView):
         return context
 
 
-
-class ProductDetail(View):
-    def get(self, *args, **kwargs):
-        return HttpResponse("Product Detail")
+class ProductDetail(ListView):
+    model = models.Product
+    template_name = "product/product_detail.html"
+    context_object_name = "products"
 
 
 class ProductAddCar(View):
