@@ -23,7 +23,7 @@ header {
 
 header i {
     color: var(--color-main);
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 500;
     transition: all 0.42s ease;
     cursor: pointer;
@@ -251,22 +251,4 @@ header i:hover {
 #esqueceuSenha a {
     color: var(--color-main);
     transition: all 0.4s ease-out;
-}
-#quantidade-no-carrinho {
-    background-color: #f40000;
-    color: var(--color-fg);
-    border-radius: 2rem;
-    width: 1.2rem;
-    height: 1.2rem;
-    align-items: center;
-    text-align: center;
-    font-size: 15px;
-    font-weight: 600;
-    margin-left: -10px;
-    margin-top: -4px;
-    justify-content: center;
-    display: flex;
-}
-#cartIcon {
-    display: flex;
 }

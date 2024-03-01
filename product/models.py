@@ -71,10 +71,3 @@ class Variation(models.Model):
 
     def _str__(self):
         return self.name or self.product.name
-
-class Banner(models.Model):
-    imagens_banner = models.ManyToManyField('ImagemBanner', related_name='banners')
-
-class ImagemBanner(models.Model):
-    imagem_banner = models.ImageField(upload_to='banner/%Y/%m/')
-

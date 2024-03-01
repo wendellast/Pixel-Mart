@@ -1,0 +1,102 @@
+body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    margin: 0;
+    padding: 0;
+    font-family: "Jost", sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+input::-webkit-input-placeholder {
+    color: var(--color-fg);
+}
+
+input::-moz-placeholder {
+    color: var(--color-fg);
+}
+
+input:-ms-input-placeholder {
+    color: var(--color-fg);
+}
+
+input::-moz-placeholder {
+    color: var(--color-fg);
+}
+
+input:-moz-placeholder {
+    color: var(--color-fg);
+}
+option {
+    color: var(--color-fg);
+    cursor: pointer;
+}
+select{
+    cursor: pointer;
+}
+input {
+    caret-color: var(--color-fg);
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes slideOutLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.slideInRight {
+    animation-name: slideInRight;
+}
+.slideOutLeft {
+    animation-name: slideOutLeft;
+}
+.slideInLeft {
+    animation-name: slideInLeft;
+}
+.slideOutRight {
+    animation-name: slideOutRight;
+}
+
+[data-theme="claro"] {
+    --color-bg: #f6f6f6;
+    --color-fg: #000000;
+    --color-main: #287dad;
+    --color-card: #fff;
+    --box-shadow: none;
+}
+
+[data-theme="escuro"] {
+    --color-bg:#1e2124;
+    --color-fg: #fff;
+    --color-main: #287dad;
+    --color-card: #252729;
+    --box-shadow: 0px 0px 10px 0px rgba(153,193,241,0.82);
+
+}

@@ -1,6 +1,15 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block product-detail %}
+
+{% if request.path == "/detail" %}
+
+{% block url-detail %}
+    <link rel="stylesheet" href=" {% static "assets/css/product_detail.css" %}" />
+    <link rel="stylesheet" href=" {% static "assets/css/product_detail_buy.css" %}" />
+{% endblock url-detail %}
+
+{% endif %}
 
 <section class="areaDeCompra">
     <div class="imagens">

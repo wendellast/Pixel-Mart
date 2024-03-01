@@ -1,17 +1,19 @@
 {% load static %}
 <header>
-    <img src="{% static "assets/img/logo.png" %}" alt="PixelMart" class="logo"
+    <img
+        src="{% static "assets/img/logo.png" %}"
+        alt="PixelMart"
+        class="logo"
     />
     <div id="pesquisa-container">
-        <input type="text" placeholder="O que você está procurando?" /><i
-            class="bx bx-search"
-        ></i>
+        <input
+            type="text"
+            placeholder="O que você está procurando?"
+        /><i class="bx bx-search"></i>
     </div>
     <div class="nav-icon">
         <i class="bx bx-user" id="loginIcon"></i>
-        <i class="bx bx-cart" id="cartIcon"
-            ><p id="quantidade-no-carrinho">0</p></i
-        >
+        <i class="bx bx-cart" id="cartIcon"></i>
         <i class="bx bx-menu" id="menuIcon"></i>
     </div>
 </header>
