@@ -10,11 +10,11 @@ class ProfileBase(View):
     template_name = 'profile/create.html'
     
     def setup(self, *args, **kwargs):
-        super().setup(**args, **kwargs)
+        super().setup(*args, **kwargs)
         
         self.context = {
-            'userform': forms.Userform(
-                data=self.resquest.POST or None
+            'userform': forms.UserForm(
+                data=self.request.POST or None
             ),
             
             'perfilform': forms.PerfilForm(
