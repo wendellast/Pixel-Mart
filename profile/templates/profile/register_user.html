@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+
+{% block content-login-form %}
+
+<h1>Cadastro</h1>
+
+<form method="POST" action="">
+    {% csrf_token %}
+    {{ userform }}
+    <button type="submit">Enviar</button>
+</form>
+{% endblock content-login-form %}

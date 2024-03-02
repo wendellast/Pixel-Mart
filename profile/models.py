@@ -62,8 +62,5 @@ class Profile(models.Model):
         if not valida_cpf(self.cpf):
             error_messagens["cpf"] = "Digite um 'CPF' válido"
 
-        if re.search(r"[0-9]", self.cep) or len(self.cep < 8):
-            error_messagens["cep"] = "Digite um 'CEP' válido"
-
         if error_messagens:
             raise ValidationError(error_messagens)

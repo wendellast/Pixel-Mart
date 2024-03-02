@@ -7,30 +7,46 @@ from . import models
 from . import forms
 
 class ProfileBase(View):
-    template_name = 'profile/create.html'
+    template_name = 'profile/register_user.html'
     
     def setup(self, *args, **kwargs):
         super().setup(*args, **kwargs)
         
-        self.context = {
+        if self.request.user.is_authenticated:
+            self.context = {
+                'userform': forms.UserForm(
+                    data=self.request.POST or None,
+                    user_form=self.request.user,
+                    instance=self.request.user
+                ),
+                
+                'perfilform': forms.PerfilForm(
+                    data=self.request.POST or None,
+                )
+            }
+            
+        else:
+            self.context = {
             'userform': forms.UserForm(
-                data=self.request.POST or None
+                data=self.request.POST or None,
             ),
             
             'perfilform': forms.PerfilForm(
                 data=self.request.POST or None
             )
-        }
-        
+          }
+
+
         self.render = render(self.request, self.template_name, self.context)
-        
-    
+
+
     def get(self, *args, **kwargs):
         return self.render
 
 
 class ProfileCreate(ProfileBase):
-    pass
+    def post(self, *args, **kwargs):
+        return self.render
 
 class ProfileUpdate(View):
     def get(self, *args, **kwargs):

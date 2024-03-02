@@ -12,9 +12,15 @@
 <body>
     {% include "partials/_header.html" %}
 
+    <!--Profile-->
+    {% block content-login-form %}{% endblock content-login-form %}
+    <!--Profile-->
 
+    <!--Prodcut-->
     {% block banner-image %}{% endblock banner-image %}
     {% block product-detail %}{% endblock product-detail %}
+    <!--Prodcut-->
+
 
 
 
@@ -76,9 +82,11 @@
                     </p>
                     <br /><br />
                     <h3 style="margin-top: 3rem">Ainda não é cliente?</h3>
+                    <a href=" {% url "profile:create" %} ">
                     <button id="irCadastro" style="margin-top: 1rem">
                         criar cadastro
                     </button>
+                    </a>
                 </div>
             </div>
         </div>
