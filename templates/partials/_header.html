@@ -1,7 +1,8 @@
 {% load static %}
 <header>
+    <a href=" {% url "product:list" %} ">
     <img src="{% static "assets/img/logo.png" %}" alt="PixelMart" class="logo"
-    />
+    /></a>
     <div id="pesquisa-container">
         <input type="text" placeholder="O que você está procurando?" /><i
             class="bx bx-search"
