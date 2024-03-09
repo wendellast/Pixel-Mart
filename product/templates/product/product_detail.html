@@ -42,8 +42,9 @@
         </div>
     </div>
     <main class="detalhes">
-        <h1 class="titulo">New Nintendo 3ds Xl Edição Limitada</h1>
+        <h1 class="titulo">{{ product.name}}New Nintendo 3ds Xl Edição Limitada</h1>
         <p id="descricao">
+            {{ product.description_short | truncatechars_html:55}}
             Com seu console New 3DS você terá entretenimento garantido
             todos os dias. Sua tecnologia foi criada para colocar novos
             desafios para jogadores novatos e especialistas. Adaptado às
@@ -54,19 +55,77 @@
             favoritos através dos aplicativos para download. Aviso legal
             A duração da bateria depende do uso que se dê ao produto.
         </p>
-        <a href="#" style="margin-top: 10px">ver mais</a>
+        <a href="#" style="margin-top: 10px" id="abrirVerMais">ver mais</a>
         <div class="valor">
-            <h2>R$ 3.199,00</h2>
+            <h2 class="preco">R$ {{ product.parce }} 3.199,00</h2>
             <div class="quantidade">
-                <h6><</h6>
-                <span>1</span>
-                <h6>></h6>
+                <i id="menos" class="fi fi-br-angle-small-left"></i>
+                <h6 id="infoQuantidade">1</h6>
+                <i id="mais" class="fi fi-br-angle-small-right"></i>
             </div>
         </div>
         <div class="botoes">
             <button class="add">adicionar ao carrinho</button>
-            <button class="fav"><3</button>
+            <button class="fav"><i class="fi fi-ss-heart"></i></button>
         </div>
     </main>
+</section>
+<section class="verMais" style="overflow-y: auto; height: 100%; display: none;">
+    <img id="x" src="/templates/static/assets/img/cross.png" alt="x">
+    <h1 class="titulo">{{ product.name}}New Nintendo 3ds Xl Edição Limitada</h1>
+    <p id="descricao">
+        {{ product.description_short }}
+        Com seu console New 3DS você terá entretenimento garantido
+        todos os dias. Sua tecnologia foi criada para colocar novos
+        desafios para jogadores novatos e especialistas. Adaptado às
+        suas necessidades Por ter um processador de 4 núcleos e um
+        gráfico, fornecem uma experiência dinâmica, respostas ágeis
+        e transições suaves de imagens de alta definição. Você
+        poderá reproduzir música, assistir seus filmes e séries
+        favoritos através dos aplicativos para download. Aviso legal
+        A duração da bateria depende do uso que se dê ao produto.
+    </p>
+    <table>
+        <thead>
+          <tr>
+            <th>Informaacoes</th>
+            <th>Descricao</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Marca</td>
+            <td>Nintendo</td>
+          </tr>
+          <tr>
+            <td>Data de lancamento</td>
+            <td>November 21, 2004 (USA)</td>
+          </tr>
+          <tr>
+            <td>Tela</td>
+            <td>Dual screens, touch screen, 3-inch LCD (top), 2.9-inch LCD (menor)</td>
+          </tr>
+          <tr>
+            <td>Processador</td>
+            <td>ARM9 e ARM7 coprocessors</td>
+          </tr>
+          <tr>
+            <td>Memoria</td>
+            <td>4 MB of RAM</td>
+          </tr>
+          <tr>
+            <td>Armazenamento</td>
+            <td>Game Card (up to 2 GB)</td>
+          </tr>
+          <tr>
+            <td>Conectividade</td>
+            <td>Wi-Fi (802.11b/g), DS Download Play, PictoChat</td>
+          </tr>
+          <tr>
+            <td>Vida da Bateria</td>
+            <td>Ate 10h de uso (dependendo do brilho da tela)</td>
+          </tr>
+        </tbody>
+      </table>
 </section>
 {% endblock product-detail %}

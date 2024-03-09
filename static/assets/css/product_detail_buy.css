@@ -84,8 +84,7 @@
     align-items: center;
     text-align: center;
 }
-.quantidade h6,
-.quantidade span {
+.quantidade h6 {
     width: 2rem;
     height: 2rem;
     margin: 0.6rem;
@@ -98,12 +97,12 @@
     font-weight: 900;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-.quantidade span {
+#infoQuantidade {
     background-color: var(--color-card);
     color: var(--color-fg);
     border: 2px solid var(--color-main);
 }
-.quantidade h6 {
+#mais, #menos {
     background-color: var(--color-main);
     color: var(--color-bg);
     cursor: pointer;

@@ -76,6 +76,15 @@
     text-align: center;
     width: 100%;
 }
+.preco {
+    font-size: 2rem;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    align-items: left;
+    text-align: left;
+}
 .quantidade {
     display: flex;
     flex-direction: row;
@@ -85,9 +94,9 @@
     text-align: center;
 }
 .quantidade h6,
-.quantidade span {
-    width: 2rem;
-    height: 2rem;
+.quantidade i {
+    width: 2.4rem;
+    height: 2.4rem;
     margin: 0.6rem;
     border-radius: 1rem;
     text-align: center;
@@ -95,18 +104,22 @@
     display: flex;
     justify-content: center;
     padding: 10px;
-    font-weight: 900;
+
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-.quantidade span {
+#infoQuantidade {
     background-color: var(--color-card);
     color: var(--color-fg);
     border: 2px solid var(--color-main);
+    font-size: 1rem;
+    font-weight: 500;
 }
-.quantidade h6 {
+#menos,
+#mais {
     background-color: var(--color-main);
     color: var(--color-bg);
     cursor: pointer;
+    font-weight: 900;
 }
 
 .botoes {
@@ -123,7 +136,6 @@
     padding: 1rem;
     border: none;
     border-radius: 1rem;
-    background-color: var(--color-main);
     cursor: pointer;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
@@ -133,6 +145,7 @@
     text-transform: uppercase;
     font-weight: 700;
     color: var(--color-bg);
+    background-color: var(--color-main);
 }
 .areaDeCompra {
     display: flex;
@@ -140,4 +153,58 @@
     flex-direction: row;
     height: 100%;
     padding: 0 3rem;
+}
+.fav {
+    color: rgb(255, 73, 73);
+    background-color: var(--color-card);
+    font-weight: 900;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+}
+/* ######## */
+.verMais {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-card);
+    height: 100%;
+    width: 50%;
+    z-index: 999;
+    padding: 3rem;
+    align-items: left;
+    justify-content: space-between;
+}
+#x {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    cursor: pointer;
+}
+.verMais p {
+    margin: 1rem 0;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    color: var(--color-fg);
+    margin-top: 1rem;
+}
+
+th,
+td {
+    border: 1px solid var(--color-main);
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
