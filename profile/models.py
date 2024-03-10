@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.forms import ValidationError
 from utils.tools import valida_cpf
+from utils.tools import valida_cep
 
 import re
 
@@ -61,6 +62,9 @@ class Profile(models.Model):
 
         if not valida_cpf(self.cpf):
             error_messagens["cpf"] = "Digite um 'CPF' válido"
+        
+        if not valida_cep(self.cep):
+            error_messagens["cep"] = "Digite um 'CEP' válido"
 
         if error_messagens:
             raise ValidationError(error_messagens)
