@@ -119,6 +119,9 @@
     cursor: pointer;
     font-weight: 900;
 }
+#mais:hover, #menos:hover{
+    background-color: var(--btn-hover);
+}
 
 .botoes {
     margin-top: 1rem;
@@ -145,6 +148,9 @@
     color: var(--color-bg);
     background-color: var(--color-main);
 }
+.add:hover{
+    background-color: var(--btn-hover);
+}
 .areaDeCompra {
     display: flex;
     justify-content: space-between;
@@ -164,6 +170,9 @@
 #abrirVerMais{
     cursor: pointer;
     color: var(--color-main);
+}
+#abrirVerMais:hover{
+    color: var(--btn-hover);
 }
 .variacoes{
     display: flex;
@@ -235,7 +244,6 @@ tr:nth-child(even) {
     width: 100%;
     position: fixed;
     z-index: 999;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -250,6 +258,7 @@ tr:nth-child(even) {
     width: 2rem;
     margin: 15px;
     bottom: 16rem;
+    cursor: pointer;
 }
 #btns2{
     width: 100%;
@@ -273,6 +282,9 @@ tr:nth-child(even) {
     color: var(--color-fg);
     height: 2.6rem;
     font-size: 1.6rem;
+}
+#adicionar:hover{
+    background-color: var(--btn-hover);
 }
 #cancelar{
     height: 1rem;

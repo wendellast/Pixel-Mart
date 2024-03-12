@@ -31,7 +31,24 @@
                     <img src="{% static "assets/img/cross.png" %}" alt="x" id="closeCart" />
                     <h1>carrinho</h1>
                 </div>
-                <div id="itensDoCart"></div>
+                <div id="itensDoCart">
+                    <div class="productInCart">
+                        <img src="https://m.media-amazon.com/images/I/61MaQXBmoSL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="foto do item">
+                        <p class="nomeDoItem">{{ product.name | truncatechars_html:20}}New Nintendo 3ds Xl Edição Limitada</p>
+                        <div id='editCartItem'>
+                            <i id="trash" class="fi fi-rr-trash"></i>
+                            <div class="quantidadeC">
+                                <i id="menosC" class="fi fi-br-angle-small-left"></i>
+                                <h6 id="infoQuantidadeC">1</h6>
+                                <i id="maisC" class="fi fi-br-angle-small-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="bottomCart">
+                    <div id="valorTotal"><h1>Total:</h1>
+                        <p>dindin</p></div>
+            <button>finalizar</button></div>
             </div>
         </div>
 

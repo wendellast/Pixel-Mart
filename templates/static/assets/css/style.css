@@ -90,6 +90,7 @@ input {
     --color-main: #287dad;
     --color-card: #fff;
     --box-shadow: none;
+    --btn-hover:  #184661;
 }
 
 [data-theme="escuro"] {
@@ -98,5 +99,6 @@ input {
     --color-main: #287dad;
     --color-card: #252729;
     --box-shadow: 0px 0px 10px 0px rgba(153,193,241,0.82);
+    --btn-hover:  rgb(66, 154, 204);
 
 }

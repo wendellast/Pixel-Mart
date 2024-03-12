@@ -1,19 +1,3 @@
-const mais = document.getElementById("mais");
-const menos = document.getElementById("menos");
-const visor = document.getElementById("infoQuantidade");
-
-mais.addEventListener("click", () => {
-    let currentValue = parseInt(visor.textContent);
-    visor.textContent = currentValue + 1;
-});
-
-menos.addEventListener("click", () => {
-    let currentValue = parseInt(visor.textContent);
-    if (currentValue > 1) {
-        visor.textContent = currentValue - 1;
-    }
-});
-
 const xClose = document.getElementById("x");
 const tela = document.getElementsByClassName("verMais")[0];
 const verMais = document.getElementById("abrirVerMais");
