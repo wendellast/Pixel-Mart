@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-card);
+    background-color: var(--branco);
     height: 80%;
     border-radius: 2rem;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -43,7 +43,7 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    background-color: var(--color-card);
+    background-color: var(--branco);
     border-radius: 1.3rem;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     margin-right: 1rem;
@@ -119,7 +119,8 @@
     cursor: pointer;
     font-weight: 900;
 }
-#mais:hover, #menos:hover{
+#mais:hover,
+#menos:hover {
     background-color: var(--btn-hover);
 }
 
@@ -148,7 +149,7 @@
     color: var(--color-bg);
     background-color: var(--color-main);
 }
-.add:hover{
+.add:hover {
     background-color: var(--btn-hover);
 }
 .areaDeCompra {
@@ -167,14 +168,14 @@
     justify-content: center;
     width: 4rem;
 }
-#abrirVerMais{
+#abrirVerMais {
     cursor: pointer;
     color: var(--color-main);
 }
-#abrirVerMais:hover{
+#abrirVerMais:hover {
     color: var(--btn-hover);
 }
-.variacoes{
+.variacoes {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -182,12 +183,22 @@
     padding: 1rem;
     margin-top: 1rem;
 }
-.imgV{
-    width: 3.5rem;
+.imgV {
+    width: 100%;
+    height: 96%;
+    cursor: pointer;
+}
+.boxVariacao {
+    padding: 10px;
+    width: 6rem;
+    height: 6rem;
     margin-right: 2rem;
     align-items: center;
-    cursor: pointer;
+    display: flex;
+    border-radius: 20px;
+    justify-content: center;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: var(--branco);
 }
 /* ######## */
 .verMais {
@@ -239,7 +250,7 @@ tr:nth-child(even) {
 }
 
 /* #### */
-.SelectVariation{
+.SelectVariation {
     background-color: var(--color-card);
     width: 100%;
     position: fixed;
@@ -251,7 +262,7 @@ tr:nth-child(even) {
     bottom: 0;
     height: 50%;
 }
-#closeVar{
+#closeVar {
     position: fixed;
     right: 0;
     height: 2rem;
@@ -260,13 +271,13 @@ tr:nth-child(even) {
     bottom: 16rem;
     cursor: pointer;
 }
-#btns2{
+#btns2 {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-#btns2 button{
+#btns2 button {
     width: auto;
     padding: 1.6rem;
     align-items: center;
@@ -277,16 +288,16 @@ tr:nth-child(even) {
     border: none;
     border-radius: 15px;
 }
-#adicionar{
+#adicionar {
     background-color: var(--color-main);
     color: var(--color-fg);
     height: 2.6rem;
     font-size: 1.6rem;
 }
-#adicionar:hover{
+#adicionar:hover {
     background-color: var(--btn-hover);
 }
-#cancelar{
+#cancelar {
     height: 1rem;
     font-size: 1.2rem;
 }

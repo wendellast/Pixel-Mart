@@ -7,6 +7,9 @@ body {
     display: flex;
     flex-direction: column;
 }
+input{
+    color: var(--color-fg);
+}
 
 input::-webkit-input-placeholder {
     color: var(--color-fg);
@@ -91,6 +94,7 @@ input {
     --color-card: #fff;
     --box-shadow: none;
     --btn-hover:  #184661;
+    --branco: #fdfbfb;
 }
 
 [data-theme="escuro"] {
@@ -100,5 +104,5 @@ input {
     --color-card: #252729;
     --box-shadow: 0px 0px 10px 0px rgba(153,193,241,0.82);
     --btn-hover:  rgb(66, 154, 204);
-
+    --branco: #fdfbfb;
 }
