@@ -97,12 +97,12 @@ const eyeOf = document.getElementById("eyeOf");
 function showPassword() {
     passwordInput.type = "text";
     eyeOn.style.display = "none";
-    eyeOf.style.display = "inline";
+    eyeOf.style.display = "flex";
 }
 
 function hidePassword() {
     passwordInput.type = "password";
-    eyeOn.style.display = "inline";
+    eyeOn.style.display = "flex";
     eyeOf.style.display = "none";
 }
 

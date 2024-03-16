@@ -31,17 +31,21 @@ header i {
 
 header i:hover {
     transform: scale(1.1);
-    color: var(--btn-hover)
+    color: var(--btn-hover);
+}
+
+#aDoLogo {
+    width: 25%;
+    margin: 0 1.6rem;
+    padding: 0;
+    height: auto;
+    align-items: center;
 }
 
 .logo {
-    height: auto;
-    width: 25%;
+    width: 100%;
     cursor: pointer;
-    align-items: center;
     display: flex;
-    margin: 0 1.6rem;
-    padding: 0;
 }
 
 .nav-icon {
@@ -135,12 +139,12 @@ header i:hover {
     text-transform: uppercase;
     font-weight: 300;
 }
-#itensDoCart{
+#itensDoCart {
     display: flex;
     flex-direction: column;
-    margin-top: 30PX;
+    margin-top: 30px;
 }
-.productInCart{
+.productInCart {
     height: 5rem;
     border-bottom: 1px solid var(--color-main);
     display: flex;
@@ -148,25 +152,25 @@ header i:hover {
     justify-content: space-evenly;
     align-items: center;
 }
-.productInCart img{
+.productInCart img {
     height: 90%;
     width: auto;
     margin-right: 10px;
     margin-bottom: 10px;
 }
-.productInCart p{
+.productInCart p {
     font-weight: 300;
     margin-left: 5px;
     align-self: baseline;
 }
-#editCartItem{
+#editCartItem {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-around;
     width: 30%;
 }
-#trash{
+#trash {
     font-size: 1.2rem;
     align-self: center;
     cursor: pointer;
@@ -186,8 +190,7 @@ header i:hover {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .quantidadeC h6,
-.quantidadeC i 
-{
+.quantidadeC i {
     width: 100%;
     height: 60%;
     margin: 0.2rem;
@@ -205,18 +208,18 @@ header i:hover {
     cursor: pointer;
     font-weight: 900;
 }
-#bottomCart{
+#bottomCart {
     margin-top: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
 }
-#valorTotal{
+#valorTotal {
     display: flex;
-    flex-direction: column
+    flex-direction: column;
 }
-#bottomCart button{
+#bottomCart button {
     background-color: var(--color-main);
     width: 40%;
     border-radius: 1rem;
@@ -226,9 +229,10 @@ header i:hover {
     text-transform: capitalize;
     cursor: pointer;
 }
-#bottomCart button:hover{
+#bottomCart button:hover {
     background-color: var(--btn-hover);
 }
+
 /* menu */
 .menu-content {
     background-color: var(--color-bg);
@@ -321,10 +325,21 @@ header i:hover {
     transform: translateY(-27px);
     font-size: 1rem;
 }
+.password i {
+    font-size: 1.4rem;
+    margin-right: 8px;
+    cursor: pointer;
+    align-self: center;
+    align-items: center;
+    display: flex;
+    color: var(--color-main);
+}
+.password i:hover {
+    color: var(--btn-hover);
+}
 #itensDologin button {
-    height: 3.5rem;
     width: 100%;
-    margin: 2rem;
+    height: 100%;
     border-radius: 10px;
     border: none;
     background-color: var(--color-main);
@@ -334,9 +349,16 @@ header i:hover {
     text-transform: uppercase;
     cursor: pointer;
 }
-#itensDologin button:hover{
+#itensDologin button:hover {
     background-color: var(--btn-hover);
 }
+
+.aDosBotoesDoLogin {
+    height: 3.5rem;
+    width: 100%;
+    margin: 2rem;
+}
+
 #esqueceuSenha {
     width: 100%;
     text-align: center;
@@ -351,7 +373,7 @@ header i:hover {
 
 #quantidade-no-carrinho {
     background-color: #f40000;
-    color: var(--color-fg);
+    color: var(--branco);
     border-radius: 2rem;
     width: 1.2rem;
     height: 1.2rem;
