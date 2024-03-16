@@ -35,6 +35,7 @@ def valida_cpf(cpf):
     else:
         return False
 
+
 def valida_cep(cep):
     cep = str(cep)
     cep = re.sub(r"[^0-9]", "", cep)
@@ -43,6 +44,7 @@ def valida_cep(cep):
         return False
     else:
         return True
+
 
 def price_format(value):
     return f"R$ {value:.2f} ".replace(".", ",")

@@ -16,6 +16,7 @@ class ProductDetail(ListView):
     template_name = "product/product_detail.html"
     context_object_name = "products"
 
+
 class ProductAddCar(View):
     def get(self, *args, **kwargs):
         return HttpResponse("Product add Car")

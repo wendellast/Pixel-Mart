@@ -62,7 +62,7 @@ class Profile(models.Model):
 
         if not valida_cpf(self.cpf):
             error_messagens["cpf"] = "Digite um 'CPF' válido"
-        
+
         if not valida_cep(self.cep):
             error_messagens["cep"] = "Digite um 'CEP' válido"
 
