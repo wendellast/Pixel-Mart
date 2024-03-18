@@ -66,9 +66,6 @@ class ProductTabell(models.Model):
     information = models.CharField(max_length=255, blank=True, null=True)
     description = models.CharField(max_length=255, blank=True, null=True)
 
-
-
-
 class Variation(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     name = models.CharField(max_length=50, blank=True, null=True)
@@ -78,4 +75,4 @@ class Variation(models.Model):
 
 class ImagesProduct(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    image_products = models.ImageField(upload_to="produt_image_var_s/%Y/%m/", blank=True, null=True)
+    image_products = models.ImageField(upload_to="produt_image_var/%Y/%m/", blank=True, null=True)
