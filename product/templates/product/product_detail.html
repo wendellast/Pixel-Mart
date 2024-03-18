@@ -15,7 +15,7 @@
     <div class="imagens">
         <div class="imgGrande">
             <img
-            src="https://images-americanas.b2w.io/produtos/7052860820/imagens/new-nintendo-3ds-xl-edicao-limitada/7052860854_2_large.jpg"
+            src="{{ products.image.url }}"
             alt="imag1"
                 class="mainImg"
             />
@@ -24,43 +24,24 @@
         <div class="menores">
             <div class="imgMenor">
                 <img
-                    src="https://images-americanas.b2w.io/produtos/7052860820/imagens/new-nintendo-3ds-xl-edicao-limitada/7052860854_2_large.jpg"
+                    src="{{ products.image.url}}"
                     alt="imag2"
                 />
             </div>
-            <div class="imgMenor">
-                <img
-                    src="https://images-americanas.b2w.io/produtos/7052860820/imagens/new-nintendo-3ds-xl-edicao-limitada/7052860854_3_large.jpg"
-                    alt="imag3"
-                />
-            </div>
-            <div class="imgMenor">
-                <img
-                    src="https://images-americanas.b2w.io/produtos/7052860820/imagens/new-nintendo-3ds-xl-edicao-limitada/7052860854_4_large.jpg"
-                    alt="imag4"
-                />
-            </div>
-            <div class="imgMenor">
-              <img
-                src="https://cdn.awsli.com.br/600x700/1799/1799670/produto/246578277/d_nq_np_2x_647050-mlb50488561201_062022-f-4524i3wt0j.jpg"
-                alt="imag5"
-              />
-          </div>
+            {% for variations in products.variation_set.all %}
+                <div class="imgMenor">
+                    <img
+                        src="{{ variations.image_var.url}}"
+                        alt="imag2"
+                    />
+                </div>
+            {% endfor %}
         </div>
     </div>
     <main class="detalhes">
-        <h1 class="titulo">{{ product.name}}New Nintendo 3ds Xl Edição Limitada</h1>
+        <h1 class="titulo">{{ products.name }}</h1>
         <p id="descricao">
-            {{ product.description_short | truncatechars_html:55}}
-            Com seu console New 3DS você terá entretenimento garantido
-            todos os dias. Sua tecnologia foi criada para colocar novos
-            desafios para jogadores novatos e especialistas. Adaptado às
-            suas necessidades Por ter um processador de 4 núcleos e um
-            gráfico, fornecem uma experiência dinâmica, respostas ágeis
-            e transições suaves de imagens de alta definição. Você
-            poderá reproduzir música, assistir seus filmes e séries
-            favoritos através dos aplicativos para download. Aviso legal
-            A duração da bateria depende do uso que se dê ao produto.
+            {{ products.description_short}}
         </p>
         <p style="margin-top: 10px" id="abrirVerMais">ver mais</p>
         <div class="variacoes">
@@ -75,7 +56,17 @@
           </a>
         </div>
         <div class="valor">
-            <h2 class="precop">R$ {{ product.parce }} 3.199,00</h2>
+
+            {% if products.price_marketing_promotional %}
+
+                <h2 class="precop">R$ {{ products.price_marketing_promotional}}</h2>
+
+            {% else %}
+            <h2 class="precop">R$ {{ products.price_marketing }}</h2>
+
+
+            {% endif %}
+
             <div class="quantidade">
                 <i id="menos" class="fi fi-br-angle-small-left"></i>
                 <h6 id="infoQuantidade">1</h6>
@@ -88,6 +79,7 @@
         </div>
     </main>
 </section>
+
 <section class="SelectVariation" style="display: none;">
   <img id="closeVar" src="/static/assets/img/cross.png" alt="x">
   <h1>selecione uma variacao</h1>
@@ -101,27 +93,19 @@
     <a href="" class="boxVariacao">
         <img src="https://images-americanas.b2w.io/produtos/7052864142/imagens/new-nintendo-3ds-xl-super-famicom-edition/7052864177_1_large.jpg" alt="variacao 3" class="imgV" id="imgV3">
     </a>
-  </div>    
+  </div>
   <div id="btns2">
     <button id="adicionar">Adicionar</button>
     <button id="cancelar">Cancelar</button>
   </div>
 
 </section>
+
 <section class="verMais" style="overflow-y: auto; height: 100%;">
     <img id="x" src="/static/assets/img/cross.png" alt="x">
     <h1 class="titulo">{{ product.name}}New Nintendo 3ds Xl Edição Limitada</h1>
     <p id="descricao">
-        {{ product.description_short }}
-        Com seu console New 3DS você terá entretenimento garantido
-        todos os dias. Sua tecnologia foi criada para colocar novos
-        desafios para jogadores novatos e especialistas. Adaptado às
-        suas necessidades Por ter um processador de 4 núcleos e um
-        gráfico, fornecem uma experiência dinâmica, respostas ágeis
-        e transições suaves de imagens de alta definição. Você
-        poderá reproduzir música, assistir seus filmes e séries
-        favoritos através dos aplicativos para download. Aviso legal
-        A duração da bateria depende do uso que se dê ao produto.
+        {{ products.description_long }}
     </p>
     <table>
         <thead>
@@ -168,4 +152,5 @@
 </section>
 
 {% endblock product-detail %}
+
 <script src="/static/assets/js/productDetailBuy.js"></script>

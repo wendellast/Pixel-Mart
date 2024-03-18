@@ -61,13 +61,24 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
+class ProductTabell(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    information = models.CharField(max_length=255, blank=True, null=True)
+    description = models.CharField(max_length=255, blank=True, null=True)
+
+
+class VariationImage(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, blank=True, null=True)
+    image_var = models.ImageField(upload_to="product_image_var/%Y/%m/", blank=True, null=True)
 
 class Variation(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     name = models.CharField(max_length=50, blank=True, null=True)
     preco = models.FloatField()
+    image_var = models.ManyToManyField(VariationImage)
     preco_promotional = models.FloatField(default=0)
     estoque = models.PositiveIntegerField(default=1)
+
 
     def _str__(self):
         return self.name or self.product.name
