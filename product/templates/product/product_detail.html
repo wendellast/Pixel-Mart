@@ -123,38 +123,12 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Marca</td>
-            <td>Nintendo</td>
-          </tr>
-          <tr>
-            <td>Data de lancamento</td>
-            <td>November 21, 2004 (USA)</td>
-          </tr>
-          <tr>
-            <td>Tela</td>
-            <td>Dual screens, touch screen, 3-inch LCD (top), 2.9-inch LCD (menor)</td>
-          </tr>
-          <tr>
-            <td>Processador</td>
-            <td>ARM9 e ARM7 coprocessors</td>
-          </tr>
-          <tr>
-            <td>Memoria</td>
-            <td>4 MB of RAM</td>
-          </tr>
-          <tr>
-            <td>Armazenamento</td>
-            <td>Game Card (up to 2 GB)</td>
-          </tr>
-          <tr>
-            <td>Conectividade</td>
-            <td>Wi-Fi (802.11b/g), DS Download Play, PictoChat</td>
-          </tr>
-          <tr>
-            <td>Vida da Bateria</td>
-            <td>Ate 10h de uso (dependendo do brilho da tela)</td>
-          </tr>
+            {% for table in products.producttabell_set.all %}
+            <tr>
+                <td>{{ table.information }}</td>
+                <td>{{ table.description }}</td>
+            </tr>
+          {% endfor %}
         </tbody>
     </table>
 </section>
