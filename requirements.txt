@@ -3,6 +3,7 @@ black==24.2.0
 click==8.1.7
 Django==5.0.2
 django-crispy-forms==2.1
+django-jazzmin==2.6.0
 gunicorn==21.2.0
 mypy-extensions==1.0.0
 packaging==23.2

@@ -15,67 +15,64 @@
     <div class="imagens">
         <div class="imgGrande">
             <img
-            src="https://images-americanas.b2w.io/produtos/7052860820/imagens/new-nintendo-3ds-xl-edicao-limitada/7052860854_2_large.jpg"
+            src="{{ products.image.url }}"
             alt="imag1"
                 class="mainImg"
             />
         </div>
 
         <div class="menores">
+
+            {% if products.imagesproduct_set.all %}
             <div class="imgMenor">
                 <img
-                    src="https://images-americanas.b2w.io/produtos/7052860820/imagens/new-nintendo-3ds-xl-edicao-limitada/7052860854_2_large.jpg"
+                    src="{{ products.image.url}}"
                     alt="imag2"
                 />
             </div>
-            <div class="imgMenor">
-                <img
-                    src="https://images-americanas.b2w.io/produtos/7052860820/imagens/new-nintendo-3ds-xl-edicao-limitada/7052860854_3_large.jpg"
-                    alt="imag3"
-                />
-            </div>
-            <div class="imgMenor">
-                <img
-                    src="https://images-americanas.b2w.io/produtos/7052860820/imagens/new-nintendo-3ds-xl-edicao-limitada/7052860854_4_large.jpg"
-                    alt="imag4"
-                />
-            </div>
-            <div class="imgMenor">
-              <img
-                src="https://cdn.awsli.com.br/600x700/1799/1799670/produto/246578277/d_nq_np_2x_647050-mlb50488561201_062022-f-4524i3wt0j.jpg"
-                alt="imag5"
-              />
-          </div>
+            {% endif %}
+
+            {% for images in products.imagesproduct_set.all %}
+                <div class="imgMenor">
+                    <img
+                        src="{{ images.image_products.url}}"
+                        alt="imag2"
+                    />
+                </div>
+            {% endfor %}
         </div>
     </div>
     <main class="detalhes">
-        <h1 class="titulo">{{ product.name}}New Nintendo 3ds Xl Edição Limitada</h1>
+        <h1 class="titulo">{{ products.name }}</h1>
         <p id="descricao">
-            {{ product.description_short | truncatechars_html:55}}
-            Com seu console New 3DS você terá entretenimento garantido
-            todos os dias. Sua tecnologia foi criada para colocar novos
-            desafios para jogadores novatos e especialistas. Adaptado às
-            suas necessidades Por ter um processador de 4 núcleos e um
-            gráfico, fornecem uma experiência dinâmica, respostas ágeis
-            e transições suaves de imagens de alta definição. Você
-            poderá reproduzir música, assistir seus filmes e séries
-            favoritos através dos aplicativos para download. Aviso legal
-            A duração da bateria depende do uso que se dê ao produto.
+            {{ products.description_short}}
         </p>
         <p style="margin-top: 10px" id="abrirVerMais">ver mais</p>
         <div class="variacoes">
-          <a href="" class="boxVariacao">
-                      <img src="https://m.media-amazon.com/images/I/61MaQXBmoSL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="variacao 1" class="imgV" id="imgV1">
-          </a>
-          <a href="" class="boxVariacao">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_872633-MLA32731490263_112019-O.webp" alt="variacao 2" class="imgV" id="imgV2">
-          </a>
-          <a href="" class="boxVariacao">
-              <img src="https://images-americanas.b2w.io/produtos/7052864142/imagens/new-nintendo-3ds-xl-super-famicom-edition/7052864177_1_large.jpg" alt="variacao 3" class="imgV" id="imgV3">
-          </a>
+
+            <a href="" class="boxVariacao">
+                <img src="{{ products.image.url }}" alt="variacao 1" class="imgV" id="imgV1">
+           </a>
+            {% for images in products.variation_set.all %}
+                <a href="" class="boxVariacao">
+                    <img src="{{ images.image_var.url }}" alt="variacao 1" class="imgV" id="imgV1">
+               </a>
+          {% endfor %}
+
+
         </div>
         <div class="valor">
-            <h2 class="precop">R$ {{ product.parce }} 3.199,00</h2>
+
+            {% if products.price_marketing_promotional %}
+
+                <h2 class="precop">R$ {{ products.price_marketing_promotional}}</h2>
+
+            {% else %}
+            <h2 class="precop">R$ {{ products.price_marketing }}</h2>
+
+
+            {% endif %}
+
             <div class="quantidade">
                 <i id="menos" class="fi fi-br-angle-small-left"></i>
                 <h6 id="infoQuantidade">1</h6>
@@ -88,40 +85,35 @@
         </div>
     </main>
 </section>
+
 <section class="SelectVariation" style="display: none;">
   <img id="closeVar" src="/static/assets/img/cross.png" alt="x">
   <h1>selecione uma variacao</h1>
   <div class="variacoes">
     <a href="" class="boxVariacao">
-                <img src="https://m.media-amazon.com/images/I/61MaQXBmoSL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="variacao 1" class="imgV" id="imgV1">
-    </a>
-    <a href="" class="boxVariacao">
-        <img src="https://http2.mlstatic.com/D_NQ_NP_872633-MLA32731490263_112019-O.webp" alt="variacao 2" class="imgV" id="imgV2">
-    </a>
-    <a href="" class="boxVariacao">
-        <img src="https://images-americanas.b2w.io/produtos/7052864142/imagens/new-nintendo-3ds-xl-super-famicom-edition/7052864177_1_large.jpg" alt="variacao 3" class="imgV" id="imgV3">
-    </a>
-  </div>    
+        <img src="{{ products.image.url }}" alt="variacao 1" class="imgV" id="imgV1">
+   </a>
+    {% for images in products.variation_set.all %}
+        <a href="" class="boxVariacao">
+            <img src="{{ images.image_var.url }}" alt="variacao 1" class="imgV" id="imgV1">
+        </a>
+    {% endfor %}
+
+
+
+  </div>
   <div id="btns2">
     <button id="adicionar">Adicionar</button>
     <button id="cancelar">Cancelar</button>
   </div>
 
 </section>
+
 <section class="verMais" style="overflow-y: auto; height: 100%;">
     <img id="x" src="/static/assets/img/cross.png" alt="x">
-    <h1 class="titulo">{{ product.name}}New Nintendo 3ds Xl Edição Limitada</h1>
+    <h1 class="titulo">{{ products.name}}</h1>
     <p id="descricao">
-        {{ product.description_short }}
-        Com seu console New 3DS você terá entretenimento garantido
-        todos os dias. Sua tecnologia foi criada para colocar novos
-        desafios para jogadores novatos e especialistas. Adaptado às
-        suas necessidades Por ter um processador de 4 núcleos e um
-        gráfico, fornecem uma experiência dinâmica, respostas ágeis
-        e transições suaves de imagens de alta definição. Você
-        poderá reproduzir música, assistir seus filmes e séries
-        favoritos através dos aplicativos para download. Aviso legal
-        A duração da bateria depende do uso que se dê ao produto.
+        {{ products.description_long }}
     </p>
     <table>
         <thead>
@@ -131,41 +123,16 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Marca</td>
-            <td>Nintendo</td>
-          </tr>
-          <tr>
-            <td>Data de lancamento</td>
-            <td>November 21, 2004 (USA)</td>
-          </tr>
-          <tr>
-            <td>Tela</td>
-            <td>Dual screens, touch screen, 3-inch LCD (top), 2.9-inch LCD (menor)</td>
-          </tr>
-          <tr>
-            <td>Processador</td>
-            <td>ARM9 e ARM7 coprocessors</td>
-          </tr>
-          <tr>
-            <td>Memoria</td>
-            <td>4 MB of RAM</td>
-          </tr>
-          <tr>
-            <td>Armazenamento</td>
-            <td>Game Card (up to 2 GB)</td>
-          </tr>
-          <tr>
-            <td>Conectividade</td>
-            <td>Wi-Fi (802.11b/g), DS Download Play, PictoChat</td>
-          </tr>
-          <tr>
-            <td>Vida da Bateria</td>
-            <td>Ate 10h de uso (dependendo do brilho da tela)</td>
-          </tr>
+            {% for table in products.producttabell_set.all %}
+            <tr>
+                <td>{{ table.information }}</td>
+                <td>{{ table.description }}</td>
+            </tr>
+          {% endfor %}
         </tbody>
     </table>
 </section>
 
 {% endblock product-detail %}
+
 <script src="/static/assets/js/productDetailBuy.js"></script>

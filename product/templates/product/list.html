@@ -39,7 +39,7 @@
 
 <section class="produtos">
     {% for product in products %}
-    <a href="{{ poduct.slug}}">
+    <a href="{{ product.slug }}">
         <div class="card">
             {% if product.image %}
             <div class="cardImg">
@@ -55,11 +55,11 @@
             <!-- ####################################################### -->
             <div class="preco">
                 {% if product.price_marketing_promotional %}
-                <h3>{{product.price_marketing_promotional|reform_price}}</h3>
-                <h4>12x de <span>R${{ product.parce }}</span></h4>
+                    <h3>{{product.price_marketing_promotional|reform_price}}</h3>
+                    <h4>12x de <span>R${{ product.parce }}</span></h4>
                 {% else %}
-                <h3>R$ {{product.price_marketing}}</h3>
-                <h4>12x de <span>R${{ product.parce }}</span></h4>
+                    <h3>R$ {{product.price_marketing}}</h3>
+                    <h4>12x de <span>R${{ product.parce }}</span></h4>
                 {% endif %}
             </div>
         </div>
