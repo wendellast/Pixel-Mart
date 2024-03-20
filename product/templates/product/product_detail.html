@@ -22,16 +22,20 @@
         </div>
 
         <div class="menores">
+
+            {% if products.imagesproduct_set.all %}
             <div class="imgMenor">
                 <img
                     src="{{ products.image.url}}"
                     alt="imag2"
                 />
             </div>
-            {% for variations in products.variation_set.all %}
+            {% endif %}
+
+            {% for images in products.imagesproduct_set.all %}
                 <div class="imgMenor">
                     <img
-                        src="{{ variations.image_var.url}}"
+                        src="{{ images.image_products.url}}"
                         alt="imag2"
                     />
                 </div>

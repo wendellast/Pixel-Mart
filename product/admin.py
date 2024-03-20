@@ -14,6 +14,11 @@ class ProductTableLineInline(admin.TabularInline):
     model = models.ProductTabell
     extra = 1
 
+class VariationAdmin(admin.ModelAdmin):
+    list_display = [
+      "image_var"
+    ]
+
 
 class ProdutoAdmin(admin.ModelAdmin):
     list_display = [
@@ -27,4 +32,4 @@ class ProdutoAdmin(admin.ModelAdmin):
 
 admin.site.register(models.Product, ProdutoAdmin)
 admin.site.register(models.ProductTabell)
-admin.site.register(models.Variation)
+admin.site.register(models.Variation, VariationAdmin)
