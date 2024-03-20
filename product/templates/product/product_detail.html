@@ -50,6 +50,9 @@
         <p style="margin-top: 10px" id="abrirVerMais">ver mais</p>
         <div class="variacoes">
 
+            <a href="" class="boxVariacao">
+                <img src="{{ products.image.url }}" alt="variacao 1" class="imgV" id="imgV1">
+           </a>
             {% for images in products.variation_set.all %}
                 <a href="" class="boxVariacao">
                     <img src="{{ images.image_var.url }}" alt="variacao 1" class="imgV" id="imgV1">
@@ -88,14 +91,16 @@
   <h1>selecione uma variacao</h1>
   <div class="variacoes">
     <a href="" class="boxVariacao">
-                <img src="https://m.media-amazon.com/images/I/61MaQXBmoSL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="variacao 1" class="imgV" id="imgV1">
-    </a>
-    <a href="" class="boxVariacao">
-        <img src="https://http2.mlstatic.com/D_NQ_NP_872633-MLA32731490263_112019-O.webp" alt="variacao 2" class="imgV" id="imgV2">
-    </a>
-    <a href="" class="boxVariacao">
-        <img src="https://images-americanas.b2w.io/produtos/7052864142/imagens/new-nintendo-3ds-xl-super-famicom-edition/7052864177_1_large.jpg" alt="variacao 3" class="imgV" id="imgV3">
-    </a>
+        <img src="{{ products.image.url }}" alt="variacao 1" class="imgV" id="imgV1">
+   </a>
+    {% for images in products.variation_set.all %}
+        <a href="" class="boxVariacao">
+            <img src="{{ images.image_var.url }}" alt="variacao 1" class="imgV" id="imgV1">
+        </a>
+    {% endfor %}
+
+
+
   </div>
   <div id="btns2">
     <button id="adicionar">Adicionar</button>
@@ -106,7 +111,7 @@
 
 <section class="verMais" style="overflow-y: auto; height: 100%;">
     <img id="x" src="/static/assets/img/cross.png" alt="x">
-    <h1 class="titulo">{{ product.name}}New Nintendo 3ds Xl Edição Limitada</h1>
+    <h1 class="titulo">{{ products.name}}</h1>
     <p id="descricao">
         {{ products.description_long }}
     </p>
