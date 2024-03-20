@@ -69,7 +69,7 @@ class ProductTabell(models.Model):
 class Variation(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     name = models.CharField(max_length=50, blank=True, null=True)
-    image_var = models.ImageField(upload_to="produt_image_variation/%Y/%m/", blank=False, null=False)
+    image_var = models.ImageField(upload_to="produt_image_variation/%Y/%m/", blank=True, null=True)
     preco = models.FloatField()
     preco_promotional = models.FloatField(default=0)
     estoque = models.PositiveIntegerField(default=1)
